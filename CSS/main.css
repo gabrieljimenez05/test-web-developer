@@ -11,43 +11,48 @@ p {
 }
 
 .topnav{
-  border-bottom: solid 2px lightgray;
-  display: flex;
-  margin: 2em 0;
-  justify-content: space-between
+  width: 100%;
+  float: left;
 }
 
-.logo{
-  padding: 0.5em;
-}
-
-.main-nav
-{
-  margin: 1em; 
-}
-
-.main-nav ul{
-  display: flex;
+.topnav ul{
+  padding:0;
   list-style-type: none;
 }
 
-.main-nav li a {
+.topnav li a
+{
+  display: block;
   color: #5c6167;
-  font-weight: 700;
-  padding: 0 4em;
+  font-weight: 500;
   white-space: nowrap;
 }
 
-.main-nav li a:hover {
+.topnav li a:hover {
   color: #02a9e0;
+}
+
+.specials{
+  background: #02a9e0;
+  width: max-content;
+}
+
+.specials li a{
+  padding: .5em;
+  color: white;
+}
+
+.specials a:hover{
+  background: #5c6167;
 }
 
 .content-wrapper
 {
   display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
+  padding-top: 2em;
+  width: 100%;
+  height: auto;
+  border-top: solid 2px lightgray;
 }
 
 .sidebar
@@ -61,10 +66,42 @@ p {
   padding-bottom: .5em;
 }
 
+.sidebar-header {
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  background:#e7e7e7;
+  color: #5c6167;
+  padding: 1em 2em 1em 1em;
+  text-align: center;
+  position: relative;
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.sb:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #e7e7e7;
+  border-bottom: 15px solid transparent;
+  right: 50px;
+  bottom: -20px;
+}
+
+
+.sidebar li{
+  color:#02a9e0;
+  padding-bottom: .5em;
+}
+
 .sidebar li a {
   color: #5c6167;
   font-weight: 500;
-  white-space: nowrap;
 }
 
 .sidebar li a:hover {
@@ -73,6 +110,7 @@ p {
 
 .page-content
 {
+  position: relative;
   border-left: solid thin lightgray;
   border-right: solid thin lightgray;
   border-bottom: solid thin lightgray;
@@ -100,14 +138,14 @@ p {
 
 .img-section{
   display: grid;  
-    grid-gap: 2em;  
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); 
-    margin: 1em;
+  grid-gap: 2em;  
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); 
+  margin: 1em;
 }
 
 
-.container {
+.img-container {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 20%;
@@ -131,7 +169,7 @@ p {
   background-color: #008CBA;
 }
 
-.container:hover .overlay {
+.img-container:hover .overlay {
   opacity: .8;
 }
 
@@ -156,4 +194,91 @@ p {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+@media only screen and (min-width: 1350px){
+  .topnav{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .logo{
+    margin: 0.8em;
+  }
+  
+  .topnav ul{
+    display: flex;
+    padding: 1em 0;
+    list-style-type: none;
+  }
+  
+  .navlist ul{
+    float: right;
+    display: inline-flex;
+  }
+  
+  .topnav li a
+  {
+    color: #5c6167;
+    font-weight: 700;
+    padding: 0 4em;
+    white-space: nowrap;
+  }
+  
+  .topnav li a:hover {
+    color: #02a9e0;
+  }
+}
+
+
+@media only screen and (max-width: 1350px){
+ .sidebar{
+    position: absolute; /* Position them relative to the browser window */
+    left: -210px; 
+    margin-right: 0;
+    z-index: 1;
+  }
+
+ .sidebar:hover {
+   left: 0; /* On mouse-over, make the elements appear as they should */
+   background-color: white;
+   z-index: 1;
+  }
+
+  .sidebar-header {
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    background:#c0c0c4;
+    color: #5c6167;
+    padding: 1em 2em 1em 1em;
+    text-align: center;
+    position: relative;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .sb:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #c0c0c4;
+    border-bottom: 15px solid transparent;
+    right: 50px;
+    bottom: -20px;
+  }
+
+  .page-content
+  {
+    position: absolute;
+    left: 10;
+    border-left: solid thin lightgray;
+    border-right: solid thin lightgray;
+    border-bottom: solid thin lightgray;
+    margin: 0.5em;
+  }
 }
