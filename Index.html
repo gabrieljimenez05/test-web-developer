@@ -8,44 +8,39 @@
 </head>
 <body>
 
- <nav>
-   <div class="topnav" >
-     <div class="logo">
-       <a href="/Index.html"><img src="images/leaselabs_logo_fullstack_rgb.png"></a>
-      </div>
-      <div class="main-nav">
-        <ul>
-          <li><a href="#Index">HOME</a></li>
-          <li><a href="#Work">OUR WORK</a></li>
-          <li><a href="#AboutUs">ABOUT US</a></li>
-          <li><a href="#Contact">CONTACT US</a></li>
-          <li><a href="#Specials">SPECIALS</a></li>
-        </ul>
-      </div> 
+<div class="topnav">
+   <div class="logo">
+     <a href="/Index.html"><img src="images/leaselabs_logo_fullstack_rgb.png"></a>
    </div>
-  </nav>
+   <ul>
+     <li><a href="#Index">HOME</a></li>
+     <li><a href="#Work">OUR WORK</a></li>
+     <li><a href="#AboutUs">ABOUT US</a></li>
+     <li><a href="#Contact">CONTACT US</a></li>
+     <div class="specials">
+     <li><a  href="#Specials">SPECIALS</a></li>
+    </div>
+   </div>
+   </ul>
+ </div>
 
 <div class="content-wrapper">
   <div class = sidebar > 
     <div class="subnav">
-      <H3>SUBNAV</H3>
-      <nav>
+      <div class="sidebar-header sb">Subnav</div>
         <ul>
           <li><a href="#Link1">Link 1</a></li>
           <li><a href="#Link2">Link 2</a></li>
           <li><a href="#Link3">Link 3</a></li>
         </ul>
-      </nav>
     </div>
     <div class="related-links">
-      <H3>Related Links</H3>
-      <nav>
+      <div class="sidebar-header sb">Related Links</div>
         <ul>
           <li><a href="#Link1">Link 1</a></li>
           <li><a href="#Link2">Link 2</a></li>
           <li><a href="#Link3">Link 3</a></li>
         </ul>
-      </nav>
     </div>
   </div> 
   <div class="page-content">
@@ -61,19 +56,19 @@
       </p>
     </div>
     <div class="img-section">
-      <div class="container" style="background-image:url('images/man.jpg');">
+      <div class="img-container" style="background-image:url('images/man.jpg');">
         <div class="overlay">
           <div class="img-Title">Man Image </div>
             <div class= "img-Desc">Image of a man.</div>
         </div>
       </div> 
-      <div class="container" style="background-image:url('images/wizard.jpg');">
+      <div class="img-container" style="background-image:url('images/wizard.jpg');">
         <div class="overlay">
           <div class="img-Title">Wizard Image </div>
             <div class= "img-Desc">Image of a wizard.</div>
         </div>
       </div> 
-      <div class="container" style="background-image:url('images/beast.jpg');">
+      <div class="img-container" style="background-image:url('images/beast.jpg');">
         <div class="overlay">
           <div class="img-Title">Beast Image </div>
             <div class= "img-Desc">Image of a beast.</div>
@@ -81,6 +76,6 @@
       </div> 
   </div>
 </div>
-
+</div>
 </body>
 </html>
