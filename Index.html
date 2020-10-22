@@ -54,28 +54,24 @@
           praesentium nisi. Alias dolorum ea quisquam quos repellendus consectetur laudantium pariatur doloremque rem, sed aperiam quaerat, accusamus, eveniet commodi amet laborum voluptates in facere error! Fuga quaerat veniam explicabo voluptatem, ex pariatur voluptate vitae beatae minima obcaecati dignissimos ut laboriosam adipisci Perferendis maxime suscipit debitis necessitatibus sit rerum. Praesentium blanditiis voluptatum aspernatur obcaecati explicabo nostrum? Esse totam dolor omnis ipsum ex nihil, quod autem facere dolores? Nulla molestiae libero hic fugit, sit nam
         </p>
       </div>
-      <div class="img-section">
-        <div class="img-container" style="background-image:url('images/man.jpg');">
-          <div class="overlay">
-            <div class="img-Title">Man Image </div>
-              <div class= "img-Desc">Image of a man.</div>
-          </div>
-        </div> 
-        <div class="img-container" style="background-image:url('images/wizard.jpg');">
-          <div class="overlay">
-            <div class="img-Title">Wizard Image </div>
-              <div class= "img-Desc">Image of a wizard.</div>
-          </div>
-        </div> 
-        <div class="img-container" style="background-image:url('images/beast.jpg');">
-          <div class="overlay">
-            <div class="img-Title">Beast Image </div>
-              <div class= "img-Desc">Image of a beast.</div>
-          </div>
-        </div> 
+      <div class="img-section" id="img-section">
     </div>
     </div>
   </div>
+  <script src="app.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        for (let image in images){
+          let column = '<div class="img-container" style="background-image:url(\''+images[image]['path'] + '\');">' 
+          + '<div class ="overlay">'
+          + '<div class ="img-Title">' + images[image]['heading']+ '</div>'
+          + '<div class = "img-Desc">' + images[image]['description'] + '</div>'
+          + '</div>'
+          + '</div>';
 
+          document.getElementById('img-section').insertAdjacentHTML('beforeend', column);  
+        }
+      });
+  </script>
 </body>
 </html>
